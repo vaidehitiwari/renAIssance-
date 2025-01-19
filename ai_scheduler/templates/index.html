@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scheduling Assistant</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body covers the full height */
+            background-image: url('/static/bgak2.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #888;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        header a:hover {
+            color: #000;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1; /* Allow main content to grow and push footer down */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Light background for better contrast */
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        h1, h3 {
+            color: #0056b3; /* Blue for headings */
+        }
+
+        form {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea, input[type="checkbox"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        textarea:focus, input[type="checkbox"]:focus {
+            border-color: #bde3f2;
+            outline: none;
+            box-shadow: 0 0 5px rgba(189, 227, 242, 0.5);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #bde3f2;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a0d2e8;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #bde3f2;
+            color: black;
+            font-weight: bold;
+        }
+
+        td {
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #888;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+	    <a href="/">home</a>
+            <a href="/aboutus">about us</a>
+            <a href="/contact">contact us</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>AI Workforce Scheduling Assistant</h1>
+        <form id="scheduleForm">
+            <h3>Select Tasks:</h3>
+            <div id="taskCheckboxes"></div><br>
+            <button type="button" onclick="generateSchedule()">Generate Schedule</button>
+        </form>
+
+        <h3>Generated Schedule:</h3>
+        <div id="output"></div>
+    </main>
+
+    <footer>
+        © all rights reserved 2025
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
