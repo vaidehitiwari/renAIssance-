@@ -26,6 +26,10 @@ def about_us():
 def contact_us():
     return render_template('contact.html')  # Serve the contact.html page
 
+@app.route('/calendar')
+def calendar():
+    return render_template('calendar.html')
+
 # Route to serve the tasks data to the frontend (for checkboxes)
 @app.route('/api/tasks', methods=['GET'])
 def get_tasks():
