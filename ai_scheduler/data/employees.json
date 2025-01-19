@@ -1,7 +1,0 @@
-[
-  { "id": 1, "name": "Alice", "available_hours": 8, "preferences": ["morning", "afternoon"] },
-  { "id": 2, "name": "Bob", "available_hours": 6, "preferences": ["afternoon", "evening"] },
-  { "id": 3, "name": "Charlie", "available_hours": 10, "preferences": ["morning"] },
-  { "id": 4, "name": "Dana", "available_hours": 5, "preferences": ["evening"] },
-  { "id": 5, "name": "Eve", "available_hours": 4, "preferences": ["morning", "evening"] }
-]
